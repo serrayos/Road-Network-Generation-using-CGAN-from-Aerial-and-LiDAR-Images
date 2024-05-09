@@ -12,6 +12,8 @@ between the binary masks and the predicted images. In order to evaluate the effe
 with a non-adversarial model. The results demonstrate that the generative adversarial net based on ResNet generative model gives superior 
 quantitative results with an IoU score 83.1% on LiDAR data set.
 
+![Alt text](relative%20/Users/serra/Downloads/kisisel_2024/MSc_Thesis/illustrationsi/proposed_model_illustration_cgan.jpg?raw=true "Proposed Method")
+
 ## Data
 The data consists of aerial and LiDAR images.  
 
