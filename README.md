@@ -1,5 +1,17 @@
 # Road-Network-Generation-using-CGAN-from-Aerial-and-LiDAR-Images
 ## Overview
+Deep learning techniques have shown promising results in computer vision tasks, particularly in image segmentation. 
+However, most of the current deep learning approaches applied on image segmentation tasks are supervised, also fail 
+to preserve spatial contiguity and cannot tackle the class imbalance issue well. Moreover, neural networks need to be 
+trained on large amounts of data with high quality labels to result high accuracy. These labels are costly and difficult 
+to create, hence time-consuming. To address these problems, we propose an unsupervised method that is a conditional 
+generative adversarial training for the task of semantic segmentation, especially for extracting road segments in aerial images. 
+In particular, we trained pix2pix based on two different generative models with the help of skip connections on satellite and LiDAR images. 
+The motivation is that the proposed method can detect the roads and maintain spatial contiguity by correcting higher-order inconsistencies 
+between the binary masks and the predicted images. In order to evaluate the effect of adversarial training, the proposed method is compared 
+with a non-adversarial model. The results demonstrate that the generative adversarial net based on ResNet generative model gives superior 
+quantitative results with an IoU score 83.1% on LiDAR data set.
+
 ## Data
 The data consists of aerial and LiDAR images.  
 
@@ -38,3 +50,6 @@ different than other GAN models in terms of generator and discriminator architec
 the U-Net and discriminator network based on convolutional PatchGAN architecture.  
 I used both U-Net and ResNet architectures in the generator model of the pix2pix. Therefore, my generator design follows the encoder-decoder structure with skip-connections, 
 as in U-Net and also ResNet, whereas the discriminator design remains the same as PatchGAN.
+
+## Reference
+Isola, P., Zhu, J. Y., Zhou, T., & Efros, A. A. (2017). Image-to-image translation with conditional adversarial networks. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 1125- 1134).
